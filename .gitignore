@@ -313,3 +313,4 @@ __pycache__/
 
 # CMake build
 [Bb]uild/
+.vscode/
