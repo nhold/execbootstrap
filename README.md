@@ -6,7 +6,7 @@ This is useful for a game launcher being launched as admin but then using the bo
 
 # Building
 
-Using CMake to generate your build systems files.
+Use CMake to generate your build systems files.
 
 Right now only visual studio compiler and windows is supported.
 
