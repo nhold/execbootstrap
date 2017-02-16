@@ -310,3 +310,6 @@ __pycache__/
 *.sln
 *.vcxproj
 *.vcxproj.filters
+
+# CMake build
+[Bb]uild/

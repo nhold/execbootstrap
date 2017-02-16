@@ -2,8 +2,8 @@
 #include <string>
 #include <iostream>
 
-#include "ExecutableInformation.h"
-#include "LaunchExectuable.h"
+#include <ExecutableInformation.h>
+#include <LaunchExecutable.h>
 
 bool stringToBool(std::string myString)
 {
@@ -15,22 +15,12 @@ bool stringToBool(std::string myString)
 
 int main(int argc, char *argv[])
 {
-	std::cout << "Number of arguments: " << argc << std::endl;
 
 	int x = 0;
 	execboot::ExecInfo info;
 
-	for (int i = 0; i < argc; i++)
+	for (int i = 1; i < argc; i++)
 	{
-		std::string argCheck = argv[i];
-		std::cout << "Argument " << i << ": " << argCheck << std::endl;
-
-		if ( argCheck.find("BootStrapper.exe") != std::string::npos || argCheck == "BootStrapper.exe")
-		{
-			std::cout << "Found self, skipping" << std::endl;
-			continue;
-		}
-
 		if (x == 0)
 		{
 			info.executablePath = argv[i];
@@ -50,6 +40,7 @@ int main(int argc, char *argv[])
 		
 	}
 
+	// If we ended on a odd number of arguments.
 	if (x == 1)
 	{
 		execboot::LaunchExecutable(info.executablePath);
