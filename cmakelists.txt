@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.0.0)
 project(execbootstrap VERSION 0.0.0)
 
 include(CTest)
+# This is for VS Code to launch debug.
+include(CMakeToolsHelpers OPTIONAL)
 enable_testing()
 
 include_directories(include)

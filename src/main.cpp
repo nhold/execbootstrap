@@ -15,7 +15,6 @@ bool stringToBool(std::string myString)
 
 int main(int argc, char *argv[])
 {
-
 	int x = 0;
 	execboot::ExecInfo info;
 
@@ -24,7 +23,6 @@ int main(int argc, char *argv[])
 		if (x == 0)
 		{
 			info.executablePath = argv[i];
-			std::cout << "About to run: " << info.executablePath << std::endl;
 			x++;
 			continue;
 		}
